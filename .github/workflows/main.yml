@@ -1,12 +1,17 @@
 name: Starter Pipeline
 
-on: push 
+on: 
+    push:
+        branches:
+            - main
 
 jobs:
   azhar:
     runs-on: ubuntu-latest
     steps:
-        - name: Hello world Command
-          run: echo "Hello, world!" > demo.txt
         
-        - run: cat demo.txt
+        - name: Checkout Code # Actions- Reusable packaged scripts
+          uses: actions/checkout@v7
+          
+        - name: Hello world Command
+          run: ls -al
