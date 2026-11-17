@@ -3,7 +3,7 @@ name: Starter Pipeline
 on: push 
 
 jobs:
-  test:
+  azhar:
     runs-on: ubuntu-latest
     steps:
         - name: Hello world Command
