@@ -1,0 +1,12 @@
+name: Starter Pipeline
+
+on: push 
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Hello world Command
+          run: echo "Hello, world!" > demo.txt
+        
+        - run: cat demo.txt
